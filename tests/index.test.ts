@@ -55,7 +55,7 @@ test("Searching by all fields = BRAF", async () => {
 
 test("Searching by symbol = ZNF*", async () => {
     const resource = "symbol";
-    const query = "ZNF*";
+    const query = " ZNF*";
     const { response } = await hgnc.searchBy(resource, query);
     expect(response.docs.length).toBe(764);
 });
