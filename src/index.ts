@@ -161,12 +161,15 @@ class HGNC {
 
   async searchBy(searchableField: string, query: any) {
     const fieldNotExists = !this.searchableFields.includes(searchableField);
+    const hasAdvancedQuery = query[0] === ":";
     if (fieldNotExists)
       throw new Error(
         "The provided resource is not valid. Please verify the options for searchableFields."
       );
     try {
-      const resource = `search/${searchableField}/${encodeURIComponent(query)}`;
+      const resource = `search/${searchableField}${
+        hasAdvancedQuery ? "" : "/"
+      }${encodeURIComponent(query)}`;
       const response = await this.customFetch(resource);
       return await this.responseByContentType(response);
     } catch (error) {
