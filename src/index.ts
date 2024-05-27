@@ -129,6 +129,10 @@ class HGNC {
     ];
   }
 
+  get documentTypes() {
+    return ["gene", "group", "site"]
+  }
+
   async fetchInfo() {
     try {
       const response = await this.customFetch("info");
@@ -171,9 +175,8 @@ class HGNC {
         "The provided resource is not valid. Please verify the options for searchableFields."
       );
     try {
-      const resource = `search/${searchableField}${
-        hasAdvancedQuery ? "" : "/"
-      }${encodeURIComponent(query)}`;
+      const resource = `search/${searchableField}${hasAdvancedQuery ? "" : "/"
+        }${encodeURIComponent(query)}`;
       const response = await this.customFetch(resource);
       return await this.responseByContentType(response);
     } catch (error) {
@@ -182,12 +185,17 @@ class HGNC {
   }
 
   async dbOverview(documentType = "gene") {
+    const documentTypeNotExists = !this.documentTypes.includes(documentType);
+    if (documentTypeNotExists)
+      throw new Error(
+        "The provided document type is not valid. Please verify the options for document types."
+      );
     const resource = `cgi-bin/search/search?query=&start=0&filter=document_type:${documentType}`;
     try {
       const response = await fetch(`${this.frontRootURL}/${resource}`, {
         method: "GET",
       });
-      const output:any = await response.json();
+      const output: any = await response.json();
       delete output.documents;
       return {
         response: output
