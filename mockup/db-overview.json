@@ -1,0 +1,271 @@
+{
+    "facets": {
+        "category_set": [
+            {
+                "count": 45637,
+                "name": "Gene"
+            }
+        ],
+        "document_type": [
+            "gene",
+            45637
+        ],
+        "locus_group": [
+            "protein-coding gene",
+            19396,
+            "pseudogene",
+            14818,
+            "non-coding rna",
+            9309,
+            "other",
+            1545,
+            "phenotype",
+            569
+        ],
+        "locus_set": [
+            {
+                "count": 19396,
+                "name": "Protein-coding gene",
+                "types": null
+            },
+            {
+                "count": 9309,
+                "name": "Non-coding RNA",
+                "types": [
+                    {
+                        "count": 127,
+                        "name": "RNA, cluster"
+                    },
+                    {
+                        "count": 5873,
+                        "name": "RNA, long non-coding"
+                    },
+                    {
+                        "count": 1970,
+                        "name": "RNA, micro"
+                    },
+                    {
+                        "count": 29,
+                        "name": "RNA, misc"
+                    },
+                    {
+                        "count": 60,
+                        "name": "RNA, ribosomal"
+                    },
+                    {
+                        "count": 58,
+                        "name": "RNA, small nuclear"
+                    },
+                    {
+                        "count": 569,
+                        "name": "RNA, small nucleolar"
+                    },
+                    {
+                        "count": 615,
+                        "name": "RNA, transfer"
+                    },
+                    {
+                        "count": 4,
+                        "name": "RNA, vault"
+                    },
+                    {
+                        "count": 4,
+                        "name": "RNA, Y"
+                    }
+                ]
+            },
+            {
+                "count": 569,
+                "name": "Phenotype",
+                "types": null
+            },
+            {
+                "count": 14818,
+                "name": "Pseudogene",
+                "types": [
+                    {
+                        "count": 203,
+                        "name": "Immunoglobulin pseudogene"
+                    },
+                    {
+                        "count": 14577,
+                        "name": "Pseudogene"
+                    },
+                    {
+                        "count": 38,
+                        "name": "T cell receptor pseudogene"
+                    }
+                ]
+            },
+            {
+                "count": 1545,
+                "name": "Other",
+                "types": [
+                    {
+                        "count": 70,
+                        "name": "Complex locus constituent"
+                    },
+                    {
+                        "count": 117,
+                        "name": "Endogenous retrovirus"
+                    },
+                    {
+                        "count": 118,
+                        "name": "Fragile site"
+                    },
+                    {
+                        "count": 230,
+                        "name": "Immunoglobulin gene"
+                    },
+                    {
+                        "count": 148,
+                        "name": "Readthrough"
+                    },
+                    {
+                        "count": 82,
+                        "name": "Region"
+                    },
+                    {
+                        "count": 205,
+                        "name": "T cell receptor gene"
+                    },
+                    {
+                        "count": 4,
+                        "name": "Transposable element"
+                    },
+                    {
+                        "count": 563,
+                        "name": "Unknown"
+                    },
+                    {
+                        "count": 8,
+                        "name": "Virus integration site"
+                    }
+                ]
+            }
+        ],
+        "locus_type": [
+            "gene with protein product",
+            19396,
+            "pseudogene",
+            14577,
+            "rna, long non-coding",
+            5873,
+            "rna, micro",
+            1970,
+            "rna, transfer",
+            615,
+            "phenotype only",
+            569,
+            "rna, small nucleolar",
+            569,
+            "unknown",
+            563,
+            "immunoglobulin gene",
+            230,
+            "t cell receptor gene",
+            205,
+            "immunoglobulin pseudogene",
+            203,
+            "readthrough",
+            148,
+            "rna, cluster",
+            127,
+            "fragile site",
+            118,
+            "endogenous retrovirus",
+            117,
+            "region",
+            82,
+            "complex locus constituent",
+            70,
+            "rna, ribosomal",
+            60,
+            "rna, small nuclear",
+            58,
+            "t cell receptor pseudogene",
+            38,
+            "rna, misc",
+            29,
+            "virus integration site",
+            8,
+            "rna, vault",
+            4,
+            "rna, y",
+            4,
+            "transposable element",
+            4
+        ],
+        "status": [
+            "approved",
+            43842,
+            "entry withdrawn",
+            1795
+        ],
+        "status_set": [
+            {
+                "count": 43842,
+                "name": "Approved"
+            },
+            {
+                "count": 1795,
+                "name": "Entry Withdrawn"
+            }
+        ],
+        "symbol_report_tag": [
+            "Stable symbol",
+            3462,
+            "Placeholder symbol",
+            492,
+            "Ambiguous",
+            34
+        ],
+        "tag_set": [
+            {
+                "count": 34,
+                "name": "Ambiguous"
+            },
+            {
+                "count": 492,
+                "name": "Placeholder symbol"
+            },
+            {
+                "count": 3462,
+                "name": "Stable symbol"
+            }
+        ]
+    },
+    "filters": [
+        "document_type:gene"
+    ],
+    "max_score": null,
+    "method_list": [
+        "max_score",
+        "previous_page",
+        "num_found",
+        "rows_in_page",
+        "filters",
+        "start",
+        "url",
+        "method_list",
+        "facets",
+        "solr_url",
+        "documents",
+        "total_pages",
+        "start_row",
+        "query",
+        "page",
+        "rows"
+    ],
+    "num_found": 45637,
+    "page": 1,
+    "previous_page": 0,
+    "query": "",
+    "rows": 10,
+    "rows_in_page": 10,
+    "solr_url": "http:\/\/192.168.1.6:8983\/solr\/hgnc_2024_05_24\/browse?q=&start=0&rows=10&wt=json&fq=document_type:gene",
+    "start": 0,
+    "start_row": 1,
+    "total_pages": 4564,
+    "url": "\/tools\/search\/#!\/"
+}

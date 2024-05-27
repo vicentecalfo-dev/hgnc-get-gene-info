@@ -5,6 +5,7 @@ This package is designed to facilitate interactions with the Human Gene Nomencla
 ### Properties
 
 - `rootURL: string`: Base URL for API requests to HGNC. Default value is 'https://rest.genenames.org'.
+- `frontRootURL: string`: Base URL for requests to HGNC Site. Default value is 'https://www.genenames.org'.
 - `output: "XML" | "JSON"`: Desired output format for the API responses. Possible values are 'XML' or 'JSON', with 'JSON' being the default.
 
 ### Methods
@@ -13,11 +14,13 @@ This package is designed to facilitate interactions with the Human Gene Nomencla
 - `fetchBy(storedField: string, query: any)`: Fetches information from the API based on a specific field and a query. Throws an error if the specified field is not in the `storedFields` list.
 - `searchByAllFields(query: any)`: Conducts a search on all searchable fields with the specified query.
 - `searchBy(searchableField: string, query: any)`: Conducts a search on a specific field with the specified query. Throws an error if the specified field is not in the `searchableFields` list.
+- `dbOverview(dumentType:string)`:  Returns general information from database.
 
 ### Accessible Properties
 
 - `storedFields`: Returns a list of fields that can be specified for the `fetchBy` method.
 - `searchableFields`: Returns a list of fields that can be specified for the `searchBy` method.
+- `documentTypes`: Return s list of fields that can br specified for th `dbOverview` method.
 
 ## Usage Examples
 
@@ -184,6 +187,20 @@ async () => {
   const data = await hgnc.searchBy(resource, query);
 };
 ```
+
+
+### DB Overview
+
+This method returns an overview in numbers of the database data.
+
+```javascript
+async () => {
+  const documentType = "gene";
+  const {response}  = await hgnc.dbOverview(documentType);
+};
+```
+
+
 ---
 
 This document covers the basic functionalities of the HGNC class for interacting with the HGNC API, making it easier to retrieve genetic data efficiently and in a structured manner.

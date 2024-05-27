@@ -73,6 +73,5 @@ test("Searching by symbol = :ZNF*+NOT+status:Approved", async () => {
 test("DB Overview - GENE", async () => {
   const documentType = "gene";
   const {response}  = await hgnc.dbOverview(documentType);
-  console.log(response);
   expect(response.hasOwnProperty("num_found")).toBe(true);
 });
