@@ -191,7 +191,7 @@ async () => {
 
 ### DB Overview
 
-This method returns an overview in numbers of the database data.
+This method returns an overview in numbers of the database data. You can see the JSON schema of the response in this [file](https://github.com/vicentecalfo-dev/hgnc-get-gene-info/blob/main/mockup/db-overview.json).
 
 ```javascript
 async () => {
