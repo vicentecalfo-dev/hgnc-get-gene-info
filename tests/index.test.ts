@@ -1,7 +1,7 @@
 import { HGNC } from "../dist";
 
 const SECONDS = 1000;
-jest.setTimeout(70 * SECONDS);
+jest.setTimeout(90 * SECONDS);
 
 const hgnc = new HGNC();
 

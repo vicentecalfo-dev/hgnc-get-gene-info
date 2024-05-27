@@ -1,6 +1,6 @@
 {
   "name": "@labinfo/hgnc-get-gene-info",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "This package retrieves gene information from the HGNC database using its REST service.",
   "main": "dist/index.js",
   "scripts": {
