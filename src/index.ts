@@ -1,10 +1,12 @@
 interface HGNCOptions {
   rootURL?: string;
+  frontRootURL?: string;
   output?: "XML" | "JSON";
 }
 
 class HGNC {
   private rootURL: string;
+  private frontRootURL: string;
   private output: "XML" | "JSON";
   private contentType = {
     XML: "text/xml",
@@ -12,9 +14,11 @@ class HGNC {
   };
   constructor({
     rootURL = "https://rest.genenames.org",
+    frontRootURL = "https://www.genenames.org",
     output = "JSON",
   }: HGNCOptions = {}) {
     this.rootURL = rootURL;
+    this.frontRootURL = frontRootURL;
     this.output = output;
   }
 
@@ -172,6 +176,22 @@ class HGNC {
       }${encodeURIComponent(query)}`;
       const response = await this.customFetch(resource);
       return await this.responseByContentType(response);
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async dbOverview(documentType = "gene") {
+    const resource = `cgi-bin/search/search?query=&start=0&filter=document_type:${documentType}`;
+    try {
+      const response = await fetch(`${this.frontRootURL}/${resource}`, {
+        method: "GET",
+      });
+      const output:any = await response.json();
+      delete output.documents;
+      return {
+        response: output
+      }
     } catch (error) {
       return error;
     }
