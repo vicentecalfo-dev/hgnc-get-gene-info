@@ -195,7 +195,7 @@ This method returns an overview in numbers of the database data. You can see the
 
 ```javascript
 async () => {
-  const documentType = "gene";
+  const documentType = "gene"; // "gene", "group" or "site"
   const {response}  = await hgnc.dbOverview(documentType);
 };
 ```

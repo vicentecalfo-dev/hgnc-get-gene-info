@@ -1,12 +1,14 @@
 {
-  "name": "hgnc-get-gene-info",
+  "name": "@labinfo/hgnc-get-gene-info",
   "version": "1.0.0",
   "description": "This package retrieves gene information from the HGNC database using its REST service.",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "concurrently \"tsc --watch\" \"nodemon ./dist/index.js\"",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
   },
   "author": "Vicente Calfo <vicentecalfo.dev@gmail.com>",
   "license": "ISC",
@@ -19,5 +21,12 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-jest": "^29.1.3",
     "typescript": "^5.4.5"
-  }
+  },
+  "keywords": [
+    "gene",
+    "bioinformatics",
+    "genome",
+    "labinfo",
+    "hgnc"
+  ]
 }
